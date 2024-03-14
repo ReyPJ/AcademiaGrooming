@@ -1,0 +1,38 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.container{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    position: relative;
+    padding-right: 200px;
+    padding-left: 200px;
+}
+
+.cont1{
+    align-items: center;
+    display: flex;
+}
+
+/* Estilos para los enlaces dentro del footer */
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+/* Estilos para el logo */
+.logoFo {
+    max-width: 100px;
+    display: block;
+    margin: 0 auto;
+}

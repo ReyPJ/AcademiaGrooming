@@ -1,14 +1,15 @@
 {% load static %}
-<footer>
+<link href="{% static 'core/css/base.css' %}" rel="stylesheet">
+<footer class="footer">
     <div class="container">
-        <div>
-            <a href="{% url 'home' %}"><img src="{% static 'core/img/vaneimg.jpg' %}"></a>
-            <p>&copy; 2024 VbAcademy. Todos los derechos reservados.</p>
+        <div class="cont1">
+            <a href="{% url 'home' %}"><img class="logoFo" src="{% static 'core/img/vaneimg.jpg' %}" alt=""></a>
+            <p class="copyright">&copy; 2024 VBacademy. Todos los derechos reservados.</p>
         </div>
-        <div>
-            <a href="#">Politicas de privacidad</a>
-            <a href="#">Terminos de uso</a>
-            <a href="#">Disclaimer</a>
+        <div class="cont2">
+            <a href="#" class="link">Politicas de privacidad</a>
+            <a href="#" class="link">Terminos de uso</a>
+            <a href="#" class="link">Disclaimer</a>
         </div>
     </div>
 </footer>
