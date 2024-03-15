@@ -1,5 +1,39 @@
-{% load static %}
-<link href="{% static 'core/css/base.css' %}" rel="stylesheet">
+{% load static %} 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título de tu Sitio</title>
+    <link href="{% static 'core/css/base.css' %}" rel="stylesheet">
+    <script src="{% static 'core/scripts/headerScript.js' %}"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="containerB">
+            <div class="logoFo">
+                <a href="{% url 'home' %}"><img class="logoFo" src="{% static 'core/img/vaneimg.jpg' %}"></a>
+            </div>
+            <div class="menu-containerH">
+                <menu class="menuH">
+                    <button id="menuButton" class="menu__item active" onclick="toggleMenu()">
+                        <i id="menuIcon" class="bi bi-menu-button-wide"></i>
+                    </button>
+                    <div id="menuItems" class="hidden">
+                        <button class="menu__item">Inicio</button>
+                        <button class="menu__item">Acerca De</button>
+                    </div>
+                </menu>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>
 <footer class="footer">
     <div class="containerf">
         <div class="cont1">

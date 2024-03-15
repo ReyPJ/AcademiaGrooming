@@ -1,38 +1,100 @@
+/* Estilos base */
+.hidden {
+    display: none;
+}
+
+.menu__item {
+    color: white;
+    border: none;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative; /* Añadimos posición relativa para animaciones */
+}
+
+#menuButton {
+    border: none;
+    background: none;
+    cursor: pointer;
+    height: auto;
+    width: auto;
+    padding: 20px;
+}
+
+#menuIcon {
+    font-size: 3em;
+    transition: transform 0.3s ease-in-out;
+}
+
+#menuButton:hover #menuIcon {
+    transform: scale(0);
+}
+
+#menuButton:hover::before {
+    content: "\f335";
+    /* Código Unicode para el icono fill */
+    font-family: "Bootstrap Icons";
+    display: inline-block;
+    transform: scale(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+#menuButton:hover::after {
+    content: "\f335";
+    /* Código Unicode para el icono fill */
+    font-family: "Bootstrap Icons";
+    display: inline-block;
+    transform: scale(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+#menuButton:hover::before,
+#menuButton:hover::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/* Estilos footer */
 .footer {
     position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    bottom: 0; 
+    width: 97.5%;
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px;
 }
 
-.containerf{
+.containerB {
+    display: flex;
+    height: 10%;
+    background-color: #333;
     justify-content: space-between;
     align-items: center;
-    display: flex;
-    position: relative;
-    padding-right: 200px;
-    padding-left: 200px;
+    width: 100%;
 }
 
-.cont1{
+.cont1 {
     align-items: center;
     display: flex;
 }
 
-/* Estilos para los enlaces dentro del footer */
+.cont2 {
+    margin-right: 20px;
+}
+
 .footer a {
     color: white;
     text-decoration: none;
     margin-right: 10px;
 }
 
-/* Estilos para el logo */
 .logoFo {
     max-width: 100px;
     display: block;
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: 15px;
 }
