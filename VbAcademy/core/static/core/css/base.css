@@ -34,7 +34,7 @@
 #menuButton:hover::before {
     content: "\f335";
     /* Código Unicode para el icono fill */
-    font-family: "Bootstrap Icons";
+    font-family: "Bootstrap Icons", serif;
     display: inline-block;
     transform: scale(0);
     transition: transform 0.3s ease-in-out;
@@ -43,7 +43,7 @@
 #menuButton:hover::after {
     content: "\f335";
     /* Código Unicode para el icono fill */
-    font-family: "Bootstrap Icons";
+    font-family: "Bootstrap Icons", serif;
     display: inline-block;
     transform: scale(0);
     transition: transform 0.3s ease-in-out;
@@ -60,7 +60,7 @@
 /* Estilos footer */
 .footer {
     position: fixed;
-    bottom: 0; 
+    bottom: 0;
     width: 97.5%;
     background-color: #333;
     color: white;
@@ -68,13 +68,21 @@
     padding: 10px;
 }
 
-.containerB {
+.containerB{
     display: flex;
     height: 10%;
     background-color: #333;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+}
+
+.containerF{
+    display: flex;
+    background-color: #333;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
 }
 
 .cont1 {

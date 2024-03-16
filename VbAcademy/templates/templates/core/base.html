@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Título de tu Sitio</title>
+    <title>{% block title %}{% endblock %} | Vb Academy</title>
     <link href="{% static 'core/css/base.css' %}" rel="stylesheet">
     <script src="{% static 'core/scripts/headerScript.js' %}"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -31,19 +31,24 @@
             </div>
         </div>
     </header>
-</body>
 
+    {% block content %}{% endblock %}
+
+    <footer class="footer">
+        <div class="containerF">
+            <div class="cont1">
+                <a href="{% url 'home' %}"><img class="logoFo" src="{% static 'core/img/vaneimg.jpg' %}" alt=""></a>
+                <p class="copyright">&copy; 2024 VB Academy. Todos los derechos reservados.</p>
+            </div>
+            <div class="cont2">
+                {% load page_extras %}
+                {% get_page_list as page_list %}
+                {% for page in page_list %}
+                    <a href="{% url 'page' page.id page.title|slugify %}" class="link">{{ page.title }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </footer>
+
+</body>
 </html>
-<footer class="footer">
-    <div class="containerf">
-        <div class="cont1">
-            <a href="{% url 'home' %}"><img class="logoFo" src="{% static 'core/img/vaneimg.jpg' %}" alt=""></a>
-            <p class="copyright">&copy; 2024 VBacademy. Todos los derechos reservados.</p>
-        </div>
-        <div class="cont2">
-            <a href="#" class="link">Politicas de privacidad</a>
-            <a href="#" class="link">Terminos de uso</a>
-            <a href="#" class="link">Disclaimer</a>
-        </div>
-    </div>
-</footer>
