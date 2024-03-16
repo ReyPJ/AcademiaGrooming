@@ -1,4 +1,4 @@
-{% load static %} 
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,30 +20,32 @@
             </div>
             <div class="menu-containerH">
                 <menu class="menuH">
-                    <button id="menuButton" class="menu__item active" onclick="toggleMenu()">
+                    <button id="menuButton" onclick="toggleMenu()" onmouseover="hoverMenuIcon(true)"
+                        onmouseout="hoverMenuIcon(false)">
                         <i id="menuIcon" class="bi bi-menu-button-wide"></i>
                     </button>
                     <div id="menuItems" class="hidden">
                         <button class="menu__item">Inicio</button>
+                        <button class="menu__item">Opcion 2</button>
                         <button class="menu__item">Acerca De</button>
                     </div>
                 </menu>
             </div>
         </div>
     </header>
+    <footer class="footer">
+        <div class="containerf">
+            <div class="cont1">
+                <a href="{% url 'home' %}"><img class="logoFo" src="{% static 'core/img/vaneimg.jpg' %}" alt=""></a>
+                <p class="copyright">&copy; 2024 VBacademy. Todos los derechos reservados.</p>
+            </div>
+            <div class="cont2">
+                <a href="#" class="link">Politicas de privacidad</a>
+                <a href="#" class="link">Terminos de uso</a>
+                <a href="#" class="link">Disclaimer</a>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
-<footer class="footer">
-    <div class="containerf">
-        <div class="cont1">
-            <a href="{% url 'home' %}"><img class="logoFo" src="{% static 'core/img/vaneimg.jpg' %}" alt=""></a>
-            <p class="copyright">&copy; 2024 VBacademy. Todos los derechos reservados.</p>
-        </div>
-        <div class="cont2">
-            <a href="#" class="link">Politicas de privacidad</a>
-            <a href="#" class="link">Terminos de uso</a>
-            <a href="#" class="link">Disclaimer</a>
-        </div>
-    </div>
-</footer>
