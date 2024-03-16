@@ -3,28 +3,42 @@
     display: none;
 }
 
+.menu-containerH {
+    position: relative;
+    display: flex; /* Utilizamos flexbox para alinear horizontalmente los elementos */
+}
+
+#menuItems {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0; /* Alineamos el menú a la derecha del botón de menú */
+    padding: 10px;
+    z-index: 1;
+    display: none;
+    flex-direction: column; /* Alinear los elementos verticalmente */
+}
+
 .menu__item {
-    color: white;
     border: none;
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    position: relative; /* Añadimos posición relativa para animaciones */
+    height: 40px;
+    margin-bottom: 10px; /* Ajusta el margen entre los botones */
+    opacity: 0;
 }
 
 #menuButton {
-    border: none;
-    background: none;
-    cursor: pointer;
-    height: auto;
+    height: 100px;
     width: auto;
-    padding: 20px;
+    cursor: pointer;
+    margin-right: 20px; /* Ajustar el margen derecho */
+    background: none; /* Eliminar el fondo */
+    border: none; /* Eliminar el borde */
+    z-index: 1; /* Asegura que el botón del menú esté por encima del menú desplegable */
 }
 
 #menuIcon {
     font-size: 3em;
     transition: transform 0.3s ease-in-out;
+    color: white; /* Color del icono */
 }
 
 #menuButton:hover #menuIcon {
@@ -55,7 +69,6 @@
     top: 0;
     left: 0;
 }
-
 
 /* Estilos footer */
 .footer {
