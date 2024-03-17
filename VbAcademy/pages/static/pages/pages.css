@@ -1,0 +1,29 @@
+.containerSample{
+    min-height: 700px;
+    padding: 50px;
+    width: 100%;
+}
+
+.footer{
+    position: static;
+}
+
+.SampleContent{
+    padding: 50px;
+    background-color: white;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    width: 100%;
+    text-align: justify-all;
+}
+
+.section-title{
+    color: #000;
+    font-size: 45px;
+    font-weight: normal;
+    line-height: 2;
+}
+.section-content{
+    color: #000;
+}
+

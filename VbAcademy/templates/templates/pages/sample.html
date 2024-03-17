@@ -1,23 +1,27 @@
 {% extends "templates/core/base.html" %}
 {% load static %}
 
+
+
 {% block title %} Extra {% endblock %}
 
 {% block content %}
-<section>
-    <div class="containerSample">
-        <div class="pageTitle">
-            <h2 class="section-title">
-                <span class="headTitle">{{ page.title }}</span>
-            </h2>
+    <link href="{% static 'pages/pages.css' %}" rel="stylesheet">
+    <section>
+        <div class="containerSample">
+            <div class="SampleContent">
+                <div class="pageTitle">
+                    <h2 class="section-title">
+                        <span class="headTitle">{{ page.title }}</span>
+                    </h2>
+                </div>
+                <div class="section-content">
+                    {{ page.content| safe }}
+                    {% if user.is_authenticated %}
+                        <p><a href="{% url 'admin:pages_page_change' page.id %}">Editar</a></p>
+                    {% endif %}
+                </div>
+            </div>
         </div>
-        <div class="section-content">
-            {{ page.content| safe }}
-            {% if user.is_authenticated %}
-                <p><a href="{% url 'admin:pages_page_change' page.id %}">Editar</a></p>
-            {% endif %}
-        </div>
-    </div>
-</section>
-
+    </section>
 {% endblock %}
