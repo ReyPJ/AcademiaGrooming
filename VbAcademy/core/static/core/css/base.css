@@ -5,41 +5,75 @@
 
 .menu-containerH {
     position: relative;
-    display: flex; /* Utilizamos flexbox para alinear horizontalmente los elementos */
 }
 
 #menuItems {
     position: absolute;
-    top: calc(100% + 10px);
-    right: 0; /* Alineamos el menú a la derecha del botón de menú */
-    padding: 10px;
+    top: 18%;
+    /* Ajusta la posición superior para que esté alineado con el header */
+    right: 100%;
+    /* Alinea el menú a la izquierda del botón de menú */
+    padding: 20px;
     z-index: 1;
     display: none;
-    flex-direction: column; /* Alinear los elementos verticalmente */
+    flex-direction: row;
 }
 
-
 .menu__item {
-    border: none;
-    height: 40px;
-    margin-bottom: 10px; /* Ajusta el margen entre los botones */
-    opacity: 100;
+    height: auto;
+    width: auto;
+    margin-right: 35px;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9ac2fc9;
+    /* Color de fondo */
+    color: white;
+    /* Color del texto */
+    text-decoration: none;
+    /* Elimina la subrayado del enlace */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    padding: 0 20px;
+    /* Espacio interno */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    /* Transición de opacidad y transformación */
+    transform: translateX(100%);
+    /* Inicialmente mover los enlaces fuera de la pantalla hacia la derecha */
+}
+
+.menu__item:hover {
+    background-color: #45a049;
+    /* Cambio de color de fondo al pasar el mouse */
+}
+
+#menuItems.show .menu__item {
+    opacity: 1;
+    /* Hace que los enlaces sean visibles */
+    transform: translateX(0);
+    /* Mueve los enlaces a su posición original */
 }
 
 #menuButton {
     height: 100px;
     width: auto;
     cursor: pointer;
-    margin-right: 20px; /* Ajustar el margen derecho */
-    background: none; /* Eliminar el fondo */
-    border: none; /* Eliminar el borde */
-    z-index: 1; /* Asegura que el botón del menú esté por encima del menú desplegable */
+    margin-right: 20px;
+    /* Ajustar el margen derecho */
+    background: none;
+    /* Eliminar el fondo */
+    border: none;
+    /* Eliminar el borde */
+    z-index: 1;
+    /* Asegura que el botón del menú esté por encima del menú desplegable */
 }
 
 #menuIcon {
     font-size: 3em;
     transition: transform 0.3s ease-in-out;
-    color: white; /* Color del icono */
+    color: white;
+    /* Color del icono */
 }
 
 #menuButton:hover #menuIcon {
@@ -82,7 +116,7 @@
     padding: 10px;
 }
 
-.containerB{
+.containerB {
     display: flex;
     height: 10%;
     background-color: #333;
@@ -91,7 +125,7 @@
     width: 100%;
 }
 
-.containerF{
+.containerF {
     display: flex;
     background-color: #333;
     justify-content: space-between;

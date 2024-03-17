@@ -16,7 +16,9 @@
     <header>
         <div class="containerB">
             <div class="logoFo">
-                <a href="{% url 'home' %}"><img class="logoFo" src="{% static 'core/img/vaneimg.jpg' %}"></a>
+                <a href="{% url 'home' %}">
+                    <img class="logoFo" src="{% static 'core/img/vaneimg.jpg' %}">
+                </a>
             </div>
             <div class="menu-containerH">
                 <menu class="menuH">
@@ -25,9 +27,9 @@
                         <i id="menuIcon" class="bi bi-menu-button-wide"></i>
                     </button>
                     <div id="menuItems" class="hidden">
-                        <button class="menu__item">Inicio</button>
-                        <button class="menu__item">Opcion 2</button>
-                        <button class="menu__item">Acerca De</button>
+                        <a href="" class="menu__item">Inicio</a>
+                        <a href="" class="menu__item">Opcion 2</a>
+                        <a href="" class="menu__item">Acerca De</a>
                     </div>
                 </menu>
             </div>
@@ -47,12 +49,12 @@
                 {% load page_extras %}
                 {% get_page_list as page_list %}
                 {% for page in page_list %}
-                    <a href="{% url 'page' page.id page.title|slugify %}" class="link">{{ page.title }}</a>
+                <a href="{% url 'page' page.id page.title|slugify %}" class="link">{{ page.title }}</a>
                 {% endfor %}
             </div>
         </div>
     </footer>
 
 </body>
-</html>
 
+</html>
