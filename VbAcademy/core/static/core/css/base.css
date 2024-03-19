@@ -9,10 +9,11 @@
 
 #menuItems {
     position: absolute;
-    top: 18%;
-    /* Ajusta la posición superior para que esté alineado con el header */
-    right: 100%;
-    /* Alinea el menú a la izquierda del botón de menú */
+    top: 50%;
+    /* Centra verticalmente */
+    right: calc(100% + 20px);
+    transform: translateY(-50%);
+    /* Alinea al centro vertical */
     padding: 20px;
     z-index: 1;
     display: none;
@@ -20,60 +21,52 @@
 }
 
 .menu__item {
-    height: auto;
-    width: auto;
-    margin-right: 35px;
+    height: 40px;
+    width: 140px;
+    margin-right: 15px;
+    /* Espacio entre botones */
     opacity: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f9ac2fc9;
-    /* Color de fondo */
-    color: white;
-    /* Color del texto */
+    background: linear-gradient(to right, #77530a, #ffd277, #77530a, #77530a, #ffd277, #77530a);
+    background-size: 250%;
+    background-position: left;
+    color: black;
+    /* Cambiar el color del texto a negro */
+    font-weight: bold;
+    /* Hacer el texto en negrita */
     text-decoration: none;
-    /* Elimina la subrayado del enlace */
-    border-radius: 5px;
-    /* Bordes redondeados */
+    border-radius: 10px;
     padding: 0 20px;
-    /* Espacio interno */
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    /* Transición de opacidad y transformación */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out, background-position 1s;
     transform: translateX(100%);
-    /* Inicialmente mover los enlaces fuera de la pantalla hacia la derecha */
 }
 
 .menu__item:hover {
-    background-color: #45a049;
-    /* Cambio de color de fondo al pasar el mouse */
+    background-position: right;
+    transition-duration: 1s;
 }
 
 #menuItems.show .menu__item {
     opacity: 1;
-    /* Hace que los enlaces sean visibles */
     transform: translateX(0);
-    /* Mueve los enlaces a su posición original */
 }
 
 #menuButton {
-    height: 100px;
+    height: 85px;
     width: auto;
     cursor: pointer;
     margin-right: 20px;
-    /* Ajustar el margen derecho */
     background: none;
-    /* Eliminar el fondo */
     border: none;
-    /* Eliminar el borde */
     z-index: 1;
-    /* Asegura que el botón del menú esté por encima del menú desplegable */
 }
 
 #menuIcon {
     font-size: 3em;
     transition: transform 0.3s ease-in-out;
     color: white;
-    /* Color del icono */
 }
 
 #menuButton:hover #menuIcon {
@@ -82,7 +75,6 @@
 
 #menuButton:hover::before {
     content: "\f335";
-    /* Código Unicode para el icono fill */
     font-family: "Bootstrap Icons", serif;
     display: inline-block;
     transform: scale(0);
@@ -91,7 +83,6 @@
 
 #menuButton:hover::after {
     content: "\f335";
-    /* Código Unicode para el icono fill */
     font-family: "Bootstrap Icons", serif;
     display: inline-block;
     transform: scale(0);
@@ -105,6 +96,22 @@
     left: 0;
 }
 
+.logoH {
+    max-width: 50px;
+    display: block;
+    margin-right: auto;
+    margin-left: 15px;
+}
+
+.containerB {
+    display: flex;
+    height: 6%;
+    background-color: #333;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
 /* Estilos footer */
 .footer {
     width: 100%;
@@ -115,15 +122,6 @@
     padding: 10px;
     position: fixed;
     bottom: 0;
-}
-
-.containerB {
-    display: flex;
-    height: 10%;
-    background-color: #333;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
 }
 
 .containerF {
@@ -140,13 +138,13 @@
     display: flex;
 }
 
-.socialMedia{
+.socialMedia {
     font-size: 25px;
     justify-content: space-between;
     align-content: space-between;
 }
 
-.socialMedia .fab{
+.socialMedia .fab {
     padding-left: 50px;
     padding-right: 50px;
 }
@@ -162,7 +160,7 @@
 }
 
 .logoFo {
-    max-width: 100px;
+    max-width: 95px;
     display: block;
     margin-right: auto;
     margin-left: 15px;
