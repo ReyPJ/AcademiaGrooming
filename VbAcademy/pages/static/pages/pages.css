@@ -1,11 +1,11 @@
 .containerSample{
-    min-height: 700px;
+    min-height: 0;
     padding: 50px;
     width: 100%;
 }
 
 .footer{
-    position: static;
+    position: fixed;
 }
 
 .SampleContent{
