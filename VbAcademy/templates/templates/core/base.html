@@ -65,7 +65,7 @@
                 {% load page_extras %}
                 {% get_page_list as page_list %}
                 {% for page in page_list %}
-                <a href="{% url 'page' page.id page.title|slugify %}" class="link">{{ page.title }}</a>
+                <a href="{% url 'page' page.id page.title|slugify %}" class="link" id="extra">{{ page.title }}</a>
                 {% endfor %}
             </div>
         </div>

@@ -20,6 +20,8 @@
     flex-direction: row;
 }
 
+
+
 .menu__item {
     height: 40px;
     width: 140px;
@@ -29,10 +31,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to right, #77530a, #ffd277, #77530a, #77530a, #ffd277, #77530a);
+    background: #efb810;
     background-size: 250%;
-    background-position: left;
-    color: black;
+    color: #f2f3f7;
     /* Cambiar el color del texto a negro */
     font-weight: bold;
     /* Hacer el texto en negrita */
@@ -46,6 +47,8 @@
 .menu__item:hover {
     background-position: right;
     transition-duration: 1s;
+    background-color: #0E0E0E;
+    color: #efb810;
 }
 
 #menuItems.show .menu__item {
@@ -66,7 +69,7 @@
 #menuIcon {
     font-size: 3em;
     transition: transform 0.3s ease-in-out;
-    color: white;
+    color: #0E0E0E;
 }
 
 #menuButton:hover #menuIcon {
@@ -106,23 +109,25 @@
 .containerB {
     display: flex;
     height: 6%;
-    background-color: #333;
+    background-color: #f2f3f7;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    box-shadow: -8px -15px 18px 8px rgb(14, 14, 14);
 }
 
 /* Estilos footer */
 .footer {
     width: 100%;
-    background-color: #0E0E0E;
-    color: white;
+    background-color: #f2f3f7;
+    color: #0E0E0E;
     margin-top: 10em;
     text-align: center;
     padding: 10px;
     z-index: 999;
     clear: both;
     bottom: 0;
+    box-shadow: 8px 15px 18px 8px rgb(14, 14, 14);
 }
 
 
@@ -147,10 +152,23 @@
 .socialMedia .fab {
     padding-left: 50px;
     padding-right: 50px;
+    color: #0E0E0E;
+}
+
+.socialMedia .fab:hover{
+    color: #efb810;
 }
 
 .cont2 {
     margin-right: 20px;
+}
+
+#extra{
+    color: #0E0E0E;
+}
+
+#extra:hover{
+    color: #efb810;
 }
 
 .footer a {

@@ -8,19 +8,24 @@
 {% block content %}
     <link rel="stylesheet" href="{% static 'core/css/home.css' %}">
     <div class="HomeContainer">
+        <!-- Cabeza de pagina inicia -->
         <div class="contH1">
             <img class="backImageH" src="{% static 'core/img/trypawback1.jpg' %}" alt="">
             <div class="textSection">
-                <h2>WELCOME</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis deserunt, incidunt maiores nisi omnis quas ullam? Ab aliquam asperiores atque cupiditate, dolorem dolorum earum facilis in incidunt ipsum itaque nesciunt officiis, quasi qui quo reiciendis sit unde ut voluptate, voluptatem. Adipisci delectus doloremque facilis neque officiis repudiandae totam unde! Ipsam.</p>
+                <h2 id="h2Home">WELCOME</h2>
+                <p id="homeP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis deserunt, incidunt maiores nisi omnis quas ullam? Ab aliquam asperiores atque cupiditate, dolorem dolorum earum facilis in incidunt ipsum itaque nesciunt officiis, quasi qui quo reiciendis sit unde ut voluptate, voluptatem. Adipisci delectus doloremque facilis neque officiis repudiandae totam unde! Ipsam.</p>
                 <div class="buttonsContainer">
-                    <button>Llamanos</button>
-                    <button>Whatsapp</button>
+                    <button class="HomeButton Phone">Llamanos <i class="fa fa-phone"></i></button>
+                    <button class="HomeButton W">Whatsapp <i class="fab fa-whatsapp"></i></button>
                 </div>
             </div>
             <div class="imageSection">
                 <img src="{% static 'core/img/pugtry1.jpg' %}" alt="" style="width: 400px">
             </div>
         </div>
+        <!-- Cabeza de pagina termina -->
+    
+        <!-- Seccion Cursos Quickly view inicia -->
+        <!-- Seccion Cursos Quickly view termina -->
     </div>
 {% endblock %}

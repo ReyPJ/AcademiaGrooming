@@ -6,7 +6,6 @@
     background-repeat: no-repeat;
     width: 90%;
 }
-
 .contH1{
     display: flex;
     justify-content: space-around;
@@ -20,15 +19,48 @@
     width: 500px;
 }
 
+#h2Home{
+    color: #0E0E0E;
+    font-weight: bold;
+}
+
+#homeP{
+    color: #0E0E0E;
+}
+
 .buttonsContainer{
     justify-content: start;
     display: flex;
 }
 
-.buttonsContainer button{
+.HomeButton{
     margin-right: 5px;
     margin-left: 5px;
+    border: none;
+    background-color: #efb810;
+    color: #f2f3f7;
+    border-radius: 5px;
 }
+
+.HomeButton.W{
+    background-color: #25d366;
+}
+
+.HomeButton.W:hover{
+    background-color: #efb810;
+    color: #0E0E0E;
+}
+
+.HomeButton.Phone{
+    background-color: #3aa8c1;
+    color: #f2f3f7;
+}
+
+.HomeButton.Phone:hover{
+    background-color: #efb810;
+    color: #0E0E0E;
+}
+
 
 .imageSection{
     margin-top: 5em;

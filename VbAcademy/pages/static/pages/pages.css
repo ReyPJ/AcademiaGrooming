@@ -1,11 +1,13 @@
 .containerSample{
     padding: 50px;
     width: 100%;
+    background: #f2f3f7 !important;
 }
+
 
 .SampleContent{
     padding: 50px;
-    background-color: white;
+    background-color: #f2f3f7;
     margin-top: 80px;
     margin-bottom: 80px;
     width: 100%;
