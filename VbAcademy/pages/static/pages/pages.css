@@ -1,9 +1,11 @@
 .containerSample{
     padding: 50px;
     width: 100%;
-    background: #f2f3f7 !important;
 }
 
+body{
+    background: #0E0E0E;
+}
 
 .SampleContent{
     padding: 50px;

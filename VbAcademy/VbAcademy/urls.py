@@ -20,6 +20,6 @@ from django.urls import path, include
 urlpatterns = [
     path('', include('core.urls')),
     path('page/', include('pages.urls')),
-    path('cursos/', include('cursos.urls')),  # Agregar la URL de la aplicación de cursos
+    path('cursos/', include('Cursos.urls')),  # Agregar la URL de la aplicación de cursos
     path('admin/', admin.site.urls), 
 ]

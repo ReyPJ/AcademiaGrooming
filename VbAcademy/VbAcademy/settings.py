@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'ckeditor',
     "core.apps.CoreConfig",
     "social.apps.SocialConfig",
-    "cursos"
+    "Cursos.apps.CursosConfig"
 ]
 
 MIDDLEWARE = [
