@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'ckeditor',
     "core.apps.CoreConfig",
-    "social.apps.SocialConfig"
+    "social.apps.SocialConfig",
+    "cursos"
 ]
 
 MIDDLEWARE = [
