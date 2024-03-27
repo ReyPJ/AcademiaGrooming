@@ -6,84 +6,62 @@
 
 
 {% block content %}
-    <link rel="stylesheet" href="{% static 'core/css/home.css' %}">
-    <div class="HomeContainer">
-        <!-- Cabeza de pagina inicia -->
-        <div class="contH1">
-            <img class="backImageH" src="{% static 'core/img/trypawback1.jpg' %}" alt="">
-            <div class="textSection">
-                <h2 id="h2Home">WELCOME</h2>
-                <p id="homeP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis deserunt, incidunt
-                    maiores nisi omnis quas ullam? Ab aliquam asperiores atque cupiditate, dolorem dolorum earum facilis
-                    in incidunt ipsum itaque nesciunt officiis, quasi qui quo reiciendis sit unde ut voluptate,
-                    voluptatem. Adipisci delectus doloremque facilis neque officiis repudiandae totam unde! Ipsam.</p>
-                <div class="buttonsContainer">
-                    <button class="HomeButton Phone">Llamanos <i class="fa fa-phone"></i></button>
-                    <button class="HomeButton W">Whatsapp <i class="fab fa-whatsapp"></i></button>
-                </div>
-            </div>
-            <div class="imageSection">
-                <img src="{% static 'core/img/pugtry1.jpg' %}" alt="" style="width: 400px">
+<link rel="stylesheet" href="{% static 'core/css/home.css' %}">
+<div class="HomeContainer">
+    <!-- Cabeza de pagina inicia -->
+    <div class="contH1">
+        <img class="backImageH" src="{% static 'core/img/trypawback1.jpg' %}" alt="">
+        <div class="textSection">
+            <h2 id="h2Home">WELCOME</h2>
+            <p id="homeP">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis deserunt, incidunt
+                maiores nisi omnis quas ullam? Ab aliquam asperiores atque cupiditate, dolorem dolorum earum facilis
+                in incidunt ipsum itaque nesciunt officiis, quasi qui quo reiciendis sit unde ut voluptate,
+                voluptatem. Adipisci delectus doloremque facilis neque officiis repudiandae totam unde! Ipsam.</p>
+            <div class="buttonsContainer">
+                <button class="HomeButton Phone">Llamanos <i class="fa fa-phone"></i></button>
+                <button class="HomeButton W">Whatsapp <i class="fab fa-whatsapp"></i></button>
             </div>
         </div>
-        <!-- Cabeza de pagina termina -->
-        <!-- Seccion Cursos Quickly Header inicia -->
-        <div class="QuicklyHeaderCont">
-            <img alt="" src="{% static 'core/img/fondoHead1.jpg' %}" id="FondoHeadImg">
-            <div class="QHeaderContent">
-                <h3 class="qhTitle">Cursos</h3>
-                <p class="qhContent">Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>
-                    Dolores et magni, minus modi nulla optio quia repellat.<br>
-                    Expedita impedit quia similique ut! Enim mollitia odit omnis!
-                </p>
-                <a href="" id="ConHead">Contactanos</a>
-            </div>
+        <div class="imageSection">
+            <img src="{% static 'core/img/pugtry1.jpg' %}" alt="" style="width: 400px">
         </div>
-        <!-- Seccion Cursos Quickly Header termina -->
-        <!-- Seccion Cursos Quickly view inicia -->
-        <div class="QuicklyCursesContainer">
-            <div class="QuicklyContainer">
-                <div class="QuicklyCurse">
-                    <div class="QuicklyImg">
-                        <img alt="" src="{% static 'core/img/yotsuba__.png' %}">
-                    </div>
-                    <div class="QuicklyTitle">
-                        <h3>Para principiantes.</h3>
-                    </div>
-                    <div class="QuicklyContent">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores distinctio
-                            ducimus incidunt obcaecati tempore? A illum natus pariatur reprehenderit.</p>
-                        <a id="QuickLink">linkdeejemplo1</a>
-                    </div>
-                </div>
-                <div class="QuicklyCurse">
-                    <div class="QuicklyImg">
-                        <img alt="" src="{% static 'core/img/yotsuba__.png' %}">
-                    </div>
-                    <div class="QuicklyTitle">
-                        <h3>Intermedio.</h3>
-                    </div>
-                    <div class="QuicklyContent">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at cupiditate eligendi et
-                            fugiat fugit perferendis quae sint unde veniam.</p>
-                        <a id="QuickLink">linkejemplo2</a>
-                    </div>
-                </div>
-                <div class="QuicklyCurse">
-                    <div class="QuicklyImg">
-                        <img alt="" src="{% static 'core/img/yotsuba__.png' %}">
-                    </div>
-                    <div class="QuicklyTitle">
-                        <h3>Especializacion.</h3>
-                    </div>
-                    <div class="QuicklyContent">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi debitis distinctio eum
-                            eveniet ex illo modi quisquam repudiandae temporibus veniam.</p>
-                        <a id="QuickLink">linkejemplo3</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Seccion Cursos Quickly view termina -->
     </div>
+    <!-- Cabeza de pagina termina -->
+    <!-- Seccion Cursos Quickly Header inicia -->
+    <div class="QuicklyHeaderCont">
+        <img alt="" src="{% static 'core/img/fondoHead1.jpg' %}" id="FondoHeadImg">
+        <div class="QHeaderContent">
+            <h3 class="qhTitle">Cursos</h3>
+            <p class="qhContent">Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>
+                Dolores et magni, minus modi nulla optio quia repellat.<br>
+                Expedita impedit quia similique ut! Enim mollitia odit omnis!
+            </p>
+            <a href="" id="ConHead">Contactanos</a>
+        </div>
+    </div>
+    <!-- Seccion Cursos Quickly view inicia -->
+    {% load todosCursos %}
+    <div class="QuicklyCursesContainer">
+        <div class="QuicklyContainer">
+            {% get_all_cursos as cursos %}
+            {% for curso in cursos %}
+            <div class="QuicklyCurse">
+                <div class="QuicklyImg">
+                    <img alt="" src="{% static 'core/img/yotsuba__.png' %}">
+                </div>
+                <div class="QuicklyTitle">
+                    <h3>{{ curso.titulo }}</h3>
+                </div>
+                <div class="QuicklyContent">
+                    <p>{{ curso.detalles | safe }}</p>
+                    <p>Precio: {{ curso.precio }}</p>
+                    <p>Oferta/Descuento: {{ curso.oferta }}</p>
+                    <a id="QuickLink" href="#">Más información</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!-- Seccion Cursos Quickly view termina -->
+</div>
 {% endblock %}
