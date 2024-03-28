@@ -3,7 +3,7 @@ from .models import Curso
 
 
 class CursoAdmin(admin.ModelAdmin):
-    list_display = ('titulo', 'campos_disponibles', 'precio', 'oferta', 'fecha_caducidad')
+    list_display = ('titulo', 'image', 'campos_disponibles', 'precio', 'oferta', 'fecha_caducidad')
     list_filter = ('fecha_caducidad',)
     search_fields = ('titulo', 'detalles')
 

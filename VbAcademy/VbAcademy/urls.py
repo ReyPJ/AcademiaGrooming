@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings # Importo las settings
 
 urlpatterns = [
     path('', include('core.urls')),
@@ -23,3 +24,10 @@ urlpatterns = [
     path('cursos/', include('Cursos.urls')),  # Agregar la URL de la aplicación de cursos
     path('admin/', admin.site.urls), 
 ]
+
+
+# Hago esto porque como no esta en produccion, de otra forma,
+# no podriamos ver las imagenes.
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

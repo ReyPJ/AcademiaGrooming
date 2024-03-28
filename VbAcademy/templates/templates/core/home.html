@@ -44,10 +44,12 @@
     <div class="QuicklyCursesContainer">
         <div class="QuicklyContainer">
             {% get_all_cursos as cursos %}
-            {% for curso in cursos %}
+            {% for curso in cursos|slice:":3" %}
             <div class="QuicklyCurse">
                 <div class="QuicklyImg">
-                    <img alt="" src="{% static 'core/img/yotsuba__.png' %}">
+                    {% if curso.image %}
+                        <img alt="" src="{{ curso.image.url }}"> <!-- CASI ME PEGO 5 TIROS PORQUE POR NO PONER ESE IF LA MIERDA ESTA NO QUERIA FUNCIONAR Y NO SABIA PORQUE -->
+                    {% endif %}
                 </div>
                 <div class="QuicklyTitle">
                     <h3>{{ curso.titulo }}</h3>
